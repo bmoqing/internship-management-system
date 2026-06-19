@@ -1,3 +1,9 @@
+<!--
+  Copyright (c) 2026 bmoqing
+  All rights reserved.
+  本代码仅供学习参考，未经许可不得用于商业用途。
+-->
+
 <template>
   <el-container class="layout-container">
     <!-- 左侧侧边栏 -->
