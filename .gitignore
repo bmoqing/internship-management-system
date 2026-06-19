@@ -1,0 +1,51 @@
+# ========== Build Artifacts ==========
+backend/target/
+*.class
+*.jar
+*.war
+*.zip
+*.tar.gz
+
+# ========== Dependencies ==========
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# ========== Environment & Secrets ==========
+.env
+.env.local
+.env.*.local
+
+# ========== IDE & Editors ==========
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# ========== IDE Metadata (Reasonix) ==========
+.reasonix/
+
+# ========== OS Files ==========
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ========== Logs ==========
+*.log
+
+# ========== Docker ==========
+mysql-data/
+
+# ========== Uploaded Files ==========
+uploads/
+
+# ========== Maven Wrapper JAR ==========
+.mvn/wrapper/maven-wrapper.jar
+
+# ========== Database / Sensitive Data ==========
+# Contains seed data with personal info (names, phone numbers)
+internship_db_clean.sql

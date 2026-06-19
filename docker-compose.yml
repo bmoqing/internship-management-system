@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  # MySQL 数据库
+  mysql:
+    image: mysql:8.0
+    container_name: internship-mysql
+    ports:
+      - "3306:3306" # 3306端口映射
+    environment:
+      MYSQL_ROOT_PASSWORD: root # 数据库密码
+      MYSQL_DATABASE: internship_db # 数据库名
+      TZ: Asia/Shanghai
+    command: --default-authentication-plugin=mysql_native_password # 解决连接驱动兼容性问题
+    volumes:
+      - ./mysql-data:/var/lib/mysql # 数据持久化，防止重启容器数据丢失

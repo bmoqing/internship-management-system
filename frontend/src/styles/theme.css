@@ -1,0 +1,127 @@
+:root {
+  --el-color-primary: #1f5fae;
+  --el-color-success: #15946d;
+  --el-color-warning: #c27a15;
+  --el-color-danger: #c2413f;
+  --el-font-family: "Source Han Sans SC", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+
+  --app-text-main: #1f3047;
+  --app-text-sub: #5c6f89;
+  --app-line-soft: rgba(21, 48, 79, 0.12);
+  --app-surface: rgba(255, 255, 255, 0.88);
+  --app-shadow-soft: 0 10px 28px rgba(13, 32, 56, 0.08);
+  --app-shadow-hover: 0 14px 30px rgba(13, 32, 56, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--app-text-main);
+  font-family: var(--el-font-family);
+  background:
+    radial-gradient(circle at 10% -10%, rgba(31, 95, 174, 0.22), transparent 43%),
+    radial-gradient(circle at 90% -15%, rgba(21, 148, 109, 0.18), transparent 42%),
+    linear-gradient(180deg, #f7f9fd 0%, #eef3fa 100%);
+}
+
+#app {
+  position: relative;
+}
+
+.container {
+  background: var(--app-surface) !important;
+  border: 1px solid var(--app-line-soft);
+  border-radius: 16px !important;
+  box-shadow: var(--app-shadow-soft);
+  backdrop-filter: blur(6px);
+  animation: page-fade-up 0.36s ease;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.el-card {
+  border-radius: 14px;
+  border: 1px solid var(--app-line-soft);
+  box-shadow: var(--app-shadow-soft);
+}
+
+.el-card:hover {
+  box-shadow: var(--app-shadow-hover);
+}
+
+.el-table {
+  --el-table-header-bg-color: #f4f7fc;
+  --el-table-row-hover-bg-color: #eef5ff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.el-table th.el-table__cell {
+  color: #355378;
+  font-weight: 600;
+}
+
+.el-button {
+  border-radius: 10px;
+}
+
+.el-dialog,
+.el-drawer {
+  border-radius: 14px;
+}
+
+.el-input__wrapper,
+.el-textarea__inner,
+.el-select__wrapper,
+.el-input-number,
+.el-pagination button,
+.el-pagination .el-pager li {
+  border-radius: 10px;
+}
+
+.el-pagination .el-pager li.is-active {
+  background: rgba(31, 95, 174, 0.12);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(73, 101, 136, 0.4);
+}
+
+@keyframes page-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    border-radius: 12px !important;
+  }
+}
